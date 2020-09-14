@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function randNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      let aNums = [];
+      let bNums = randNumber(1, 8);
+      while (aNums.length < 6) {
+        let a = randNumber(1, 38);
+        if (aNums.includes(a)) continue;
+        aNums.push(a);
+      }
+      // aNums = aNums.join();
+      document.write(`A區: ${aNums} <br> B區: ${bNums}`);
+    </script>
+  </body>
+</html>
